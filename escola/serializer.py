@@ -7,6 +7,7 @@ class AlunoSerializer(serializers.ModelSerializer):
         fields = ['id', 'nome', 'rg', 'cpf', 'data_nascimento']
 
 class CursoSerializer(serializers.ModelSerializer):
-    model = Curso
-    fields = '__all__'
+    class Meta:
+        model = Curso
+        fields = '__all__'
 
